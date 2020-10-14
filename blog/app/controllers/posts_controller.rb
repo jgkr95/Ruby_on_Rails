@@ -15,6 +15,7 @@ class PostsController < ApplicationController
   # GET /posts/new
   def new
     @post = Post.new
+    @author=Author.new
   end
 
   # GET /posts/1/edit
@@ -69,6 +70,6 @@ class PostsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def post_params
-      params.require(:post).permit(:Title, :Genre, :Description, :Number_of_pages)
+      params.require(:post).permit(:author_id,:Name,:Title, :Genre, :Description, :Number_of_pages)
     end
 end
