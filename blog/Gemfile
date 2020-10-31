@@ -22,7 +22,15 @@ gem 'jbuilder', '~> 2.7'
 gem 'mongoid', '~> 7.0.5'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
+gem 'mongo'
 
+# gem "haml-rails"
+gem "haml-rails", "~> 2.0"
+
+gem 'carrierwave'
+gem 'carrierwave-mongoid', require: 'carrierwave/mongoid', git: 'git://github.com/jnicklas/carrierwave-mongoid.git'
+gem 'mongoid-grid_fs'
+gem 'bson_ext'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
